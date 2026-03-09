@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  min-height: max(884px, 100dvh);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.font-variation-fill {
+  font-variation-settings: 'FILL' 1;
+}
+
+.gauge-conic {
+  background: conic-gradient(from 180deg at 50% 100%, #2969ff 0%, #2969ff 85%, #1e293b 85%, #1e293b 100%);
+  -webkit-mask: radial-gradient(farthest-side, transparent 75%, white 76%);
+  mask: radial-gradient(farthest-side, transparent 75%, white 76%);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(203, 213, 225, 0.1);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #2969ff;
+  border-radius: 10px;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #2969ff rgba(203, 213, 225, 0.1);
+}
+
+@keyframes custom-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 10px 30px -10px rgba(41, 105, 255, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px -5px rgba(41, 105, 255, 0.6);
+  }
+}
+
+.animate-custom-pulse {
+  animation: custom-pulse 3s infinite ease-in-out;
+}
+
+.safe-area-bottom {
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 1rem);
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.fill-1 {
+  font-variation-settings: 'FILL' 1;
+}
